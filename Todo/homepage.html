@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yacho's - Sandwich Premium</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="img/Logo.png" alt="Logo Yacho's" />
+      </a>
+
+      <!-- Navegación desktop -->
+      <div class="nav-links desktop-only">
+        <a href="#menu" class="nav-link">carta</a>
+        <a href="#contacto" class="nav-link">contacto</a>
+        <a href="#visitanos" class="nav-link">visítanos</a>
+      </div>
+
+      <!-- Botón pedido -->
+      <div class="nav-actions">
+        <button class="btn-pedido">hacer pedido</button>
+        <button class="menu-toggle mobile-only" id="menuToggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Menú móvil -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <button class="close-menu" id="closeMenu">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <div class="mobile-menu-content">
+      <a href="#menu" class="mobile-nav-link">Carta</a>
+      <a href="#contacto" class="mobile-nav-link">Contacto</a>
+      <a href="#visitanos" class="mobile-nav-link">Visítanos</a>
+      <button class="btn-pedido">Hacer Pedido</button>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">SANDWICHES <span class="highlight">PREMIUM</span></h1>
+      <p class="hero-subtitle">Los mejores ingredientes para el mejor sabor</p>
+      <button class="btn-pedido btn-hero pulse">ORDENA AHORA</button>
+    </div>
+  </section>
+
+  <!-- Promos destacadas -->
+  <section id="promos" class="destacadas">
+    <div class="container">
+      <h2 class="section-title dark">PROMOS DESTACADAS</h2>
+      
+      <div class="promo-slider">
+        <div class="promo-container" id="promoContainer">
+          <div class="promo-card">
+            <div class="promo-image">
+              <img src="img/promos/PromoParaDos.jpg" alt="Promo Para Dos">
+            </div>
+            <div class="promo-content">
+              <h3 class="promo-title">Promo Para Dos</h3>
+              <p class="promo-description">2 sandwiches + 2 bebidas + papas</p>
+              <div class="promo-footer">
+                <span class="promo-price">$19.99</span>
+                <button class="btn-dark">Ordenar</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="promo-card">
+            <div class="promo-image">
+              <img src="img/promos/promoParaTres.jpg" alt="Promo Para Tres">
+            </div>
+            <div class="promo-content">
+              <h3 class="promo-title">Promo Para Tres</h3>
+              <p class="promo-description">3 sandwiches + 3 bebidas + papas grandes</p>
+              <div class="promo-footer">
+                <span class="promo-price">$27.99</span>
+                <button class="btn-dark">Ordenar</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="promo-card">
+            <div class="promo-image">
+              <img src="img/promos/promoParaTres.jpg" alt="Promo Familia">
+            </div>
+            <div class="promo-content">
+              <h3 class="promo-title">Promo Familia</h3>
+              <p class="promo-description">4 sandwiches + 4 bebidas + 2 papas grandes</p>
+              <div class="promo-footer">
+                <span class="promo-price">$34.99</span>
+                <button class="btn-dark">Ordenar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="promo-controls">
+          <button class="promo-control" data-index="0"></button>
+          <button class="promo-control" data-index="1"></button>
+          <button class="promo-control" data-index="2"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Botones de categorías -->
+  <section id="menu" class="categorias">
+    <div class="container">
+      <div class="categoria-grid">
+        <button class="btn-categoria nuevo">Nuevos Sabores</button>
+        <button class="btn-categoria">Clásicos</button>
+        <button class="btn-categoria">Promociones</button>
+        <button class="btn-categoria">Complementos</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lo más vendido -->
+  <section class="mas-vendido">
+    <div class="container">
+      <h2 class="section-title">LO MÁS <span class="highlight">VENDIDO</span></h2>
+      
+      <div class="product-grid">
+        <div class="product-card" data-aos="fade-up">
+          <div class="product-image">
+            <img src="img/sandwich-1.jpg" alt="El Clásico">
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <span>4.8</span>
+            </div>
+          </div>
+          <div class="product-content">
+            <h3 class="product-title">El Clásico</h3>
+            <p class="product-description">Jamón, queso, lechuga, tomate y nuestra salsa especial</p>
+            <div class="product-footer">
+              <span class="product-price">$8.99</span>
+              <button class="btn-add">Añadir</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="product-image">
+            <img src="img/sandwich-2.jpg" alt="El Supremo">
+            <div class="product-badge">NUEVO</div>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <span>4.9</span>
+            </div>
+          </div>
+          <div class="product-content">
+            <h3 class="product-title">El Supremo</h3>
+            <p class="product-description">Doble carne, bacon, queso cheddar, cebolla caramelizada</p>
+            <div class="product-footer">
+              <span class="product-price">$12.99</span>
+              <button class="btn-add">Añadir</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="product-image">
+            <img src="img/sandwich-3.jpg" alt="Vegetariano">
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <span>4.7</span>
+            </div>
+          </div>
+          <div class="product-content">
+            <h3 class="product-title">Vegetariano</h3>
+            <p class="product-description">Aguacate, queso, pimientos, champiñones y rúcula</p>
+            <div class="product-footer">
+              <span class="product-price">$9.99</span>
+              <button class="btn-add">Añadir</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-5">
+        <button class="btn-ver-mas">
+          Ver Carta Completa
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Animación de Sandwich -->
+  <section class="sandwich-animation">
+    <div class="container">
+      <div class="animation-header" data-aos="fade-up">
+        <h2 class="section-title">INGREDIENTES <span class="highlight">PREMIUM</span></h2>
+        <p class="animation-subtitle">Cada bocado es una experiencia única</p>
+      </div>
+      <canvas id="sandwichCanvas" width="800" height="200"></canvas>
+    </div>
+  </section>
+
+  <!-- Testimonios -->
+  <section class="testimonios">
+    <div class="container">
+      <h2 class="section-title">LO QUE DICEN <span class="highlight">NUESTROS CLIENTES</span></h2>
+      
+      <div class="testimonial-slider">
+        <div class="testimonial-container" id="testimonialContainer">
+          <!-- Los testimonios se generarán con JavaScript -->
+        </div>
+        
+        <div class="testimonial-controls">
+          <button class="testimonial-arrow prev" id="prevTestimonial">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="testimonial-dots" id="testimonialDots">
+            <!-- Los dots se generarán con JavaScript -->
+          </div>
+          <button class="testimonial-arrow next" id="nextTestimonial">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visítanos -->
+  <section id="visitanos" class="visitanos">
+    <div class="container">
+      <h2 class="section-title"><span class="highlight">VISÍTANOS</span></h2>
+      
+      <div class="location-grid">
+        <div class="location-info">
+          <div class="info-card">
+            <h3 class="info-title">
+              <i class="fas fa-map-marker-alt highlight"></i>
+              Ubicación
+            </h3>
+            <p>Av. Principal 123, Ciudad</p>
+            <p class="mb-4">A dos cuadras del Parque Central</p>
+            
+            <h3 class="info-title">Horarios</h3>
+            <div class="horarios">
+              <div class="horario-item">
+                <span>Lunes - Jueves</span>
+                <span>11:00 - 22:00</span>
+              </div>
+              <div class="horario-item">
+                <span>Viernes - Sábado</span>
+                <span>11:00 - 00:00</span>
+              </div>
+              <div class="horario-item">
+                <span>Domingo</span>
+                <span>12:00 - 20:00</span>
+              </div>
+            </div>
+          </div>
+          
+          <button class="btn-como-llegar">Cómo Llegar</button>
+        </div>
+        
+        <div class="location-map">
+          <canvas id="mapCanvas"></canvas>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contacto" class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3 class="footer-title">Yacho's</h3>
+          <p class="footer-text">Los mejores sandwiches premium con ingredientes de calidad y sabores únicos.</p>
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-col">
+          <h3 class="footer-title">Contacto</h3>
+          <ul class="footer-list">
+            <li>Teléfono: (123) 456-7890</li>
+            <li>Email: info@yachos.com</li>
+            <li>Dirección: Av. Principal 123, Ciudad</li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h3 class="footer-title">Newsletter</h3>
+          <p class="footer-text">Suscríbete para recibir nuestras promociones y novedades.</p>
+          <div class="newsletter-form">
+            <input type="email" placeholder="Tu email" class="newsletter-input">
+            <button class="newsletter-button">Enviar</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© <span id="currentYear"></span> Yacho's Sandwich Premium. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
